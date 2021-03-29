@@ -1,9 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-const title = 'React with Webpack and Yo'
+const title = 'React with Webpack and Yo';
 
-ReactDOM.render(<App title={title} />, document.getElementById('app'))
+ReactDOM.render(
+  <App title={title} />,
+  document.getElementById('app'),
+);
 
-module.hot.accept()
+module.hot.accept();
