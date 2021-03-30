@@ -6,7 +6,7 @@ const title = 'React with Webpack and Yo';
 
 ReactDOM.render(
   <App title={title} />,
-  document.getElementById('app'),
+  document.getElementById('root'),
 );
 
 module.hot.accept();
