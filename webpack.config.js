@@ -20,7 +20,21 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              esModule: false,
+              importLoaders: 1,
+              modules: {
+                auto: true,
+                localIdentName: '[name]--[local]--[hash:base64:5]',
+              },
+              url: false,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                config: true,
+              },
             },
           },
         ],
