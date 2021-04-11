@@ -1,11 +1,9 @@
 import React from 'react';
-import styles from './style.css';
-import ArrowIcon from './Icons/arrow.svg';
+import Test from './components/Test';
 
 const App = ({ title }) => (
-  <div className={styles.title}>
-    {title}
-    <ArrowIcon width="40px" height="40px" />
+  <div>
+    <Test title={title} />
   </div>
 );
 
