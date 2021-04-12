@@ -8,5 +8,3 @@ ReactDOM.render(
   <App title={title} />,
   document.getElementById('root'),
 );
-
-module.hot.accept();

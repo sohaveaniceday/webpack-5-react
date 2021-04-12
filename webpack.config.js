@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/index.tsx'),
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.css$/i,
@@ -54,11 +54,11 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    filename: 'index.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -73,4 +73,5 @@ module.exports = {
     contentBase: path.resolve(__dirname, './dist'),
     hot: true,
   },
+  devtool: 'source-map',
 };
