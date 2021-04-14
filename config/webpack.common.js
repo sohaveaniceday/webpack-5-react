@@ -40,15 +40,6 @@ module.exports = {
       template: paths.src + '/template.html', // template file
       filename: 'index.html', // output file
     }),
-
-    // ESLint configuration
-    // new ESLintPlugin({
-    //   files: ['.', 'src', 'config'],
-    //   formatter: 'table',
-    // }),
-
-    // Prettier configuration
-    // new PrettierPlugin(),
   ],
   module: {
     rules: [
