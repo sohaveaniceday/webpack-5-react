@@ -1,6 +1,4 @@
 const webpack = require('webpack');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const paths = require('./paths');
@@ -58,12 +56,5 @@ module.exports = merge(common, {
   plugins: [
     // Only update what has changed on hot reload
     new webpack.HotModuleReplacementPlugin(),
-    new ESLintPlugin({
-      extensions: ['js', 'jsx', 'ts', 'tsx'],
-    }),
-
-    new ForkTsCheckerWebpackPlugin({
-      async: false,
-    }),
   ],
 });

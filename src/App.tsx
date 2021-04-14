@@ -1,7 +1,7 @@
 import React from 'react';
 import Test from './components/Test';
 
-const App = ({ title }: any) => (
+const App = ({ title }: any): any => (
   <div>
     <Test title={title} />
   </div>
