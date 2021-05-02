@@ -1,8 +1,11 @@
+import React, { useEffect } from 'react';
 import ArrowIcon from '../Icons/arrow.svg';
-import React from 'react';
 import styles from './Test.module.css';
 
 const Test = ({ title }: any) => {
+  useEffect(() => {
+    console.log(title);
+  }, []);
   return (
     <div className={styles.title}>
       {title}
