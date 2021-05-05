@@ -7,12 +7,14 @@
   "plugins": [
     "@typescript-eslint",
     "react-hooks",
-    "simple-import-sort"
+    "simple-import-sort",
+    "css-modules"
   ],
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:css-modules/recommended"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
