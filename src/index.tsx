@@ -1,8 +1,9 @@
-import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'React with Webpack and Yo';
+import App from './App';
+
+const title = 'React with Webpack';
 
 ReactDOM.render(
   <App title={title} />,
